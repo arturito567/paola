@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor Amarilla para Ti Amor</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #fef3c7;
+            font-family: Arial, sans-serif;
+        }
+        svg {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ffcc00;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+        <h2>Una flor amarilla para ti mi amor paola</h2>
+    <p>Por que no hay dinero para una real ahorita</p>
+    <svg viewBox="0 0 200 200">
+        <!-- Pétalos -->
+        <circle cx="100" cy="60" r="25" fill="gold" opacity="0" class="petal"/>
+        <circle cx="140" cy="100" r="25" fill="gold" opacity="0" class="petal"/>
+        <circle cx="100" cy="140" r="25" fill="gold" opacity="0" class="petal"/>
+        <circle cx="60" cy="100" r="25" fill="gold" opacity="0" class="petal"/>
+
+        <!-- Centro -->
+        <circle cx="100" cy="100" r="20" fill="orange" opacity="0" id="center"/>
+
+        <!-- Tallos y hojas -->
+        <rect x="97" y="120" width="6" height="60" fill="green" opacity="0" id="stem"/>
+        <ellipse cx="85" cy="150" rx="10" ry="20" fill="green" opacity="0" class="leaf"/>
+        <ellipse cx="115" cy="150" rx="10" ry="20" fill="green" opacity="0" class="leaf"/>
+    </svg>
+     <p>te quiero mucho amor 
+        att: Arturo :3
+        
+     </p>
+    <button onclick="growFlower()">Ver crecer la flor "preciona"</button>
+
+    <script>
+        let step = 0;
+        function growFlower() {
+            let parts = document.querySelectorAll(".petal, #center, #stem, .leaf");
+            if (step < parts.length) {
+                parts[step].style.opacity = "1";
+                step++;
+            }
+        }
+    </script>
+
+</body>
+</html>
